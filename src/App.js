@@ -47,7 +47,10 @@ const App = () => {
         <p style={{ marginBottom: '8px' }}>Total Price: ${sampleOrder.totalPrice}</p>
         <button
           style={buttonStyles}
-          onClick="getNativeModal"
+          onClick={() => {
+            alert('Order placed!');
+            window.parent.postMessage("getNativeModal");
+          }}
         >
           Order
         </button>
